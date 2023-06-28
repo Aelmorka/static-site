@@ -40,7 +40,7 @@ function Tweeter() {
         _twits.push(postObj)
     }
     const getPosts = () => {
-        return _twits
+        return JSON.parse(JSON.stringify(_twits))
     }
 
     const removePost = postId => {
@@ -66,17 +66,3 @@ function Tweeter() {
     }
 }
 
-const tweeter = Tweeter()
-
-tweeter.addPost("This is my own post!")
-console.log(tweeter.getPosts())
-
-tweeter.removePost("p1")
-console.log(tweeter.getPosts())
-
-tweeter.addComment("Damn straight it is!", "p3")
-tweeter.addComment("Second the best!", "p2")
-console.log(tweeter.getPosts())
-
-tweeter.removeComment("p2", "c6")
-console.log(tweeter.getPosts())
