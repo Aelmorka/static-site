@@ -51,7 +51,9 @@ body{
     background-color: #2980b9
 }
 
-.post-text{
+.post-header{
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
 }
 
@@ -73,4 +75,9 @@ body{
 .delete-comment{
     cursor: pointer;
     color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 50%;
+    padding: 0 3px;
+    margin-right: 10px;
+    font-size: 8px;
 }
